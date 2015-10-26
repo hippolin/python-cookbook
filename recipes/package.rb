@@ -29,7 +29,7 @@ if platform_family?('rhel') && major_version < 6
 else
   python_pkgs = value_for_platform_family(
                   "debian"  => ["python","python-dev"],
-                  "rhel"    => ["python","python-devel"],
+                  "rhel"    => ["python","python-devel",'gcc'],
                   "fedora"  => ["python","python-devel"],
                   "freebsd" => ["python"],
                   "smartos" => ["python27"],

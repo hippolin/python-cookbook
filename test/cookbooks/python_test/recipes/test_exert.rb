@@ -18,7 +18,7 @@
 # limitations under the License.
 #
 
-python_virtualenv "#{Chef::Config[:file_cache_path]}/virtualenv" do
+python_virtualenv "/tmp/kitchen/virtualenv" do
   interpreter "python"
   owner "root"
   group "root"
@@ -27,7 +27,7 @@ end
 
 python_pip "boto" do
   action :install
-  virtualenv "#{Chef::Config[:file_cache_path]}/virtualenv"
+  virtualenv "/tmp/kitchen/virtualenv"
 end
 
 python_pip "psutil" do
